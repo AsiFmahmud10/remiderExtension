@@ -1,40 +1,29 @@
-const getClass =(cls)=>{
+const getClass = (cls) => {
     return document.getElementsByClassName(`${cls}`)
 }
-const getId =(id)=>{
+const getId = (id) => {
     return document.getElementById(`${id}`)
 }
-const fetchQuote =async(url)=>{
-    try{
+const fetchQuote = async(url) => {
+    try {
         let data = await fetch(url)
-         data = await data.json()
+        data = await data.json()
         updateData(data)
-    }
-    catch(err){
+    } catch (err) {
         return err.message
     }
 }
-const updateData=(data)=>{
-    getId('quotes').innerHTML= JSON.stringify(data.description)
+const updateData = (data) => {
+    getId('quotes').innerHTML = JSON.stringify(data.description)
     console.log(data)
-    
+
 }
-const ran=(limit)=>{
-     return Math.floor(Math.random() * limit).toString()
+const ran = (limit) => {
+    return Math.floor(Math.random() * limit).toString()
 }
 
 // main.js
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
-            fetchQuote(`https://bn-hadith-api.herokuapp.com/hadiths/${ran(60)}`)
-
-
-
-
-
-
-
-
-
-
-})
+    fetchQuote(`https://bn-hadith-api.herokuapp.com/hadiths/${ran(60)}`)
+});

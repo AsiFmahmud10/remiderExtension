@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/index.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Document</title>
     <script defer src="./JS/main.js"></script>
-  </head>
-      <body>
-  
-         <div class="container">
-                 <h1 class="text-2xl font-mono">LETS START</h1>
-                  <div id="quotes">
+</head>
 
-                  </div>                     
-         </div>
+<body>
 
-      </body>
+    <div class="container">
+        <h1 class="text-2xl font-mono">LETS START</h1>
+        <div id="quotes">
+        </div>
+        <div class="container-todo">
+            <div class="header">
+                <h2>Todo List</h2>
+                <div class="clear">
+                    <i class='fa fa-refresh'></i>
+                </div>
+                <div id="date"></div>
+            </div>
+            <div class="content">
+                <ul id="list">
+
+                </ul>
+            </div>
+            <div class="add-to-do">
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input" placeholder="Add a to-do">
+            </div>
+        </div>
+        <button id="hide" type="submit" class="btn btn-primary">ToDo</button>
+    </div>
+
+    <script src="./Js/index.js"></script>
+</body>
+
 </html>
